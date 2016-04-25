@@ -72,7 +72,7 @@ def main(params):
     references = [' '.join(x['tokens']) for x in img['sentences']] # as list of lists of tokens
     kwparams = {'beam_size' : params['beam_size']}
     
-    img['feat'] = np.random.rand(*img['feat'].shape)
+    #img['feat'] = np.random.rand(*img['feat'].shape)
 
     Ys = BatchGenerator.predict([{'image':img}], model, checkpoint_params, **kwparams)
     
